@@ -1,0 +1,91 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.container-header {
+  display: flex;
+  flex-direction: row;
+  padding:0;
+  margin: 0;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.container-content{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 500px;
+}
+
+.item {
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+.item.item-header{
+  width: 100%;
+  height: 5%;
+  background-color: lightgrey;
+  color: black;
+}
+.item.main-content {
+  order:1;
+  background-color: green;
+  width:100%;
+  display:flex;
+}
+
+.item.subcontent-A {
+  order:0;
+  background-color: blue;
+  display: none;
+}
+.item.subcontent-B {
+  order:3;
+  background-color: red;
+  display: none;
+}
+
+@media all and (min-width:768px){
+  .item.main-content {
+    width: 50%;
+  }
+  .item.subcontent-A {
+    display: flex;
+    width: 50%;
+  }
+}
+
+@media all and (min-width:1024px){
+  .item.main-content {
+    width: 33.3%;
+  }
+  .item.subcontent-A {
+    width: 33.3%;
+  }
+  .item.subcontent-B {
+    width: 33.3%;
+    display:flex;
+  }
+}
+@media all and (min-width:1900px){
+  .item.main-content {
+    width: 30%;
+  }
+  .item.subcontent-A {
+    width: 30%;
+  }
+  .item.subcontent-B {
+    width: 30%;
+  }
+   .container-content{
+    justify-content: center;
+  }
+}
+
